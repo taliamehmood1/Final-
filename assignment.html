@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMC👗</title>
+    <link rel="stylesheet" href="style1.css">
+    
+    <style>
+        /* Additional styles for spacing and footer text size */
+        .contact-form {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            margin-bottom: 40px; /* Adds space below the contact form */
+        }
+
+        footer {
+            background:rgb(182, 162, 169);
+            padding: 20px;
+            color: #2e2d2d;
+            position: relative;
+            bottom: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-contact, .footer-newsletter {
+            flex: 1 1 300px;
+            margin: 10px;
+        }
+
+        .footer-contact h3, .footer-newsletter h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact p, .footer-newsletter p {
+            font-size: 0.8em;
+            margin: 5px 0;
+        }
+
+        .footer-newsletter form label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.8em;
+        }
+
+        .footer-newsletter input[type="email"] {
+            padding: 10px;
+            border: 1px solid #a3a0a0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-newsletter button {
+            background-color: #411f26;
+            color: #fdfbfb;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer-newsletter button:hover {
+            background-color: #411f26;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #a3a0a0;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom .social-media a {
+            margin: 0 10px;
+            color: #2e2d2d;
+        }
+
+        .footer-bottom .social-media i {
+            font-size: 18px;
+        }
+
+        /* Table styles */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .custom-table thead tr {
+            background-color: #411f26;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+        }
+
+        .custom-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .custom-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .custom-table tbody tr:last-of-type {
+            border-bottom: 2px solid #411f26;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>TMC👗</h1>
+        </div>
+       
+        <nav>
+            
+            <ul>
+                
+                <li><a href="blog.html">📰</a></li>
+                <li><a href="contact.html">☎️</a></li>
+                
+            </ul>
+            
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <video autoplay muted loop>
+            <source src="" type="video/mp4">
+            <source src="video8.mp4" type="video/webm">
+            <source src="video8.mp4" type="video/ogg">
+            Your browser does not support the video tag. Please update your browser or try using a different one.
+        </video>
+        <div class="hero-content">
+            <h1>Discover Talia's New Collection</h1>
+            <a href="#shop" class="btn">Shop Now</a>
+        </div>
+    </section>
+    <section>
+        <div class="second-header"> <!-- Corrected the class name -->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Talia's Clothing</h2>
+        <div class="about-content">
+            <p>At Talia's Clothing, we believe fashion is an expression of individuality...</p>
+            <a href="#collections" class="btn">Explore Our Collections</a>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="featured-collections">
+        <h2>Shop Our Collections</h2>
+        <div class="collections-grid">
+            <div class="collection-item">
+                <img src="ready.jpg" alt="Western Collection">
+                <h3>Ready to wear</h3>
+                <p>Flattering falres to every ocassion.</p>
+                <a href="western.html" class="btn">Shop Now</a> <!-- Link to western.html -->
+            </div>
+            <div class="collection-item">
+                <img src="saree.jpg" alt="Eastern Collection">
+                <h3>Unstiched Silk</h3>
+                <p>Delve into the celebration of calsic beauty.</p>
+                <a href="eastern.html" class="btn">Shop Now</a> <!-- Link to eastern.html -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="arrivals-grid">
+            <div class="arrival-item">
+                <a href="exclusive.html"><img src="ex3.jpeg" alt="Exclusive Design"></a> <!-- Link to exclusive.html -->
+                <div class="arrival-info">
+                    <h3>Exclusive Design</h3>
+                    <p>Explore the latest designs now.</p>
+                    <a href="exclusive.html" class="btn">View Details</a> <!-- Link to exclusive.html -->
+                </div>
+            </div>
+            <div class="arrival-item">
+                <a href="trendy.html"><img src="modern3.jpg" alt="Trendsetting Fashion"></a> <!-- Link to trendy.html -->
+                <div class="arrival-info">
+                    <h3>Trendsetting Fashion</h3>
+                    <p>Be the first to wear new style.</p>
+                    <a href="trendy.html" class="btn">View Details</a> <!-- Link to trendy.html -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Table Section -->
+    <section id="info" class="info-table">
+        <h2>Fashion Categories</h2>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Style</th>
+                    <th>Price Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Western Wear</td>
+                    <td>Casual & Chic</td>
+                    <td>5000Rs - 8000Rs</td>
+                </tr>
+                <tr>
+                    <td>Eastern Wear</td>
+                    <td>Elegant & Traditional</td>
+                    <td>3000RS - 7000Rs</td>
+                </tr>
+                <tr>
+                    <td>Exclusive Designs</td>
+                    <td>Limited Edition</td>
+                    <td>5000 Rps+</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@taliasclothing.com</p>
+                <p>Phone: +92 300 1234567</p>
+                <p>Address: 123 Fashion Street, Lahore</p>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form>
+                    <label for="newsletter-email">Email:</label>
+                    <input type="email" id="newsletter-email" name="newsletter-email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Talia's Clothing. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

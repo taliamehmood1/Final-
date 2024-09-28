@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(182, 162, 169);
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap nav items on smaller screens */
+}
+
+header nav ul li {
+    float:left;
+    margin: 0.5rem;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem; /* Adjusted for better mobile readability */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    ;
+    
+}
+
+
+/* Main Section Styles */
+main {
+    padding: 2rem;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 1.8rem; /* Adjusted font size for better readability on smaller screens */
+    color: #1b1b1b;
+}
+
+.intro p {
+    font-size: 1rem; /* Adjusted for better readability */
+    color: #575656;
+}
+
+/* Product Grid */
+.product-grid {
+    width: 100%;
+    overflow: hidden; /* Clear floating elements */
+    padding: 2rem;
+}
+
+.product-item {
+    float: left; /* Floats the product items */
+    width: calc(25% - 1rem); /* 4 items in a row with a gap */
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem; /* Add bottom margin to separate rows */
+    text-align: center;
+    position: relative; /* For any potential positioning */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.product-item .add-to-cart-button {
+    visibility: hidden; /* Initially hide the button */
+    padding: 0.5rem 1rem;
+    background-color: #411f26;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin-top: 10px;
+    transition: visibility 0s, opacity 0.5s linear; /* Add transition for smooth appearance */
+    opacity: 0; /* Start as invisible */
+}
+
+/* Show button when hovering over the product item */
+.product-item:hover .add-to-cart-button {
+    visibility: visible; /* Make the button visible on hover */
+    opacity: 1; /* Change opacity to make it visible */
+    background-color: #552635;
+}
+
+
+/* Clear float after product grid */
+.product-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Shop Now Button */
+.shop-now {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.shop-now-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #411f26;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+    background-color: #552635;
+}
+
+/* Video Section */
+.video-section {
+    width: 100%;
+    overflow: hidden; /* Clear floating elements */
+    padding: 3rem;
+    background-color: whitesmoke;
+
+}
+
+.video-section video {
+    float: left; /* Float video to the left */
+    width: 50%; /* Adjusted width */
+    max-height: 400px;
+    margin-right: 1rem;
+}
+
+.video-section .text {
+    float: left; /* Float text next to the video */
+    width: 45%; /* Adjusted width */
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.video-section .text h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.video-section .text p {
+    font-size: 1rem;
+    color: #585858;
+}
+
+/* Clear float after video section */
+.video-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Footer Styles */
+.footer {
+    padding: 2rem;
+    background-color: rgb(182, 162, 169);
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 1rem); /* Two columns on medium screens */
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .video-section {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center; /* Center align items */
+        padding: 1rem; /* Reduced padding on smaller screens */
+    }
+
+    .video-section .text {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .video-section video {
+        max-height: 250px; /* Adjust video height */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%; /* Single column on small screens */
+    }
+
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        font-size: 0.8rem;
+    }
+
+    .video-section video {
+        max-height: 200px; /* Further reduced video height on small screens */
+    }
+}

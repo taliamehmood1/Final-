@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(182, 162, 169);
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for navigation */
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap nav items on smaller screens */
+}
+
+header nav ul li {
+    margin: 0.5rem;
+    flex: 1; /* Allow items to grow equally */
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem; /* Adjusted for better mobile readability */
+    padding: 10px; /* Added padding for better clickable area */
+    transition: text-decoration 0.3s; /* Smooth transition for text decoration */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section Styles */
+main {
+    padding: 2rem;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 1.8rem; /* Adjusted font size for better readability on smaller screens */
+    color: #1b1b1b;
+}
+
+.intro p {
+    font-size: 1rem; /* Adjusted for better readability */
+    color: #575656;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex; /* Use Flexbox for product layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    width: 100%;
+    padding: 2rem;
+    justify-content: space-between; /* Space items evenly */
+}
+
+.product-item {
+    flex: 1 1 calc(25% - 1rem); /* Responsive width with flex-grow and shrink */
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    margin: 0.5rem; /* Add margin for spacing */
+    text-align: center;
+    position: relative; /* For any potential positioning */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.product-item .add-to-cart-button {
+    visibility: hidden; /* Initially hide the button */
+    padding: 0.5rem 1rem;
+    background-color: #411f26;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    margin-top: 10px;
+    transition: visibility 0s, opacity 0.5s linear; /* Add transition for smooth appearance */
+    opacity: 0; /* Start as invisible */
+}
+
+/* Show button when hovering over the product item */
+.product-item:hover .add-to-cart-button {
+    visibility: visible; /* Make the button visible on hover */
+    opacity: 1; /* Change opacity to make it visible */
+    background-color: #552635;
+}
+
+/* Shop Now Button */
+.shop-now {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.shop-now-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #411f26;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+    background-color: #552635;
+}
+
+/* Video Section */
+.video-section {
+    display: flex; /* Use Flexbox for video section */
+    padding: 3rem;
+    background-color: whitesmoke;
+}
+
+.video-section video {
+    flex: 1 1 50%; /* Adjusted width for video */
+    max-height: 400px;
+    margin-right: 1rem;
+}
+
+.video-section .text {
+    flex: 1 1 45%; /* Adjusted width for text */
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.video-section .text h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.video-section .text p {
+    font-size: 1rem;
+    color: #585858;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex; /* Flexbox for footer */
+    flex-direction: column; /* Stack columns vertically */
+    padding: 2rem;
+    background-color: rgb(182, 162, 169);
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Columns */
+.footer-content {
+    display: flex; /* Flexbox for footer content */
+    flex-wrap: wrap; /* Allow wrapping of columns */
+    justify-content: space-between; /* Space out footer columns */
+    gap: 20px; /* Add gap between columns */
+    margin: 0 auto; /* Center align */
+    max-width: 1200px; /* Limit maximum width */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 1rem); /* Two columns on medium screens */
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 0.9rem;
+    }
+
+    .video-section {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center; /* Center align items */
+        padding: 1rem; /* Reduced padding on smaller screens */
+    }
+
+    .video-section .text {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .video-section video {
+        max-height: 250px; /* Adjust video height */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%; /* Single column on small screens */
+    }
+
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .intro p {
+        font-size: 0.8rem;
+    }
+
+    .video-section video {
+        max-height: 200px; /* Further reduced video height on small screens */
+    }
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Add animations to specific elements */
+header {
+    animation: slideDown 0.5s ease; /* Slide down effect for header */
+}
+
+.product-item,
+.video-section .text,
+.intro,
+.footer {
+    animation: fadeIn 0.5s ease; /* Fade in effect for these sections */
+}

@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Header */
+header {
+    background-color: #682b54;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    float: left; /* Align the logo to the left */
+}
+
+nav {
+    float: right; /* Align the navigation to the right */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* Clear floating issues */
+}
+
+nav ul li {
+    float: left; /* Align the nav items horizontally */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    clear: both; /* Ensure main content clears floated elements */
+}
+
+.blog-posts {
+    margin: 0 -10px; /* Negative margins to handle spacing */
+}
+
+.blog-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 30%; /* Set the width manually */
+    margin: 10px;
+    float: left; /* Float cards next to each other */
+    position: relative; /* To allow stacking of child elements */
+}
+
+.blog-card img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.blog-card h3 {
+    padding: 15px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.blog-card p {
+    padding: 0 15px 15px;
+    height: 100px; /* Fixed height to maintain layout consistency */
+}
+
+.blog-card a {
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #682b54;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Contact form */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    clear: both; /* Clear floats */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #682b54;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #682b54;
+}
+
+/* Footer */
+footer {
+    background: #94497b;
+    padding: 20px;
+    color: #2e2d2d;
+    position: relative;
+}
+
+.footer-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 30%;
+    float: left;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #a3a0a0;
+    padding-top: 10px;
+    margin-top: 20px;
+    width: 100%;
+    clear: both;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #2e2d2d;
+}

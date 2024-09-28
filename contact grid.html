@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1gridfinal.css">
+    <script src="tb.js" defer></script>
+    <title>Contact Us</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">ℹ️ About</a></li>
+            <li>
+                <a href="#products">🛍️ Products</a>
+                <div class="dropdown">
+                    <a href="#clothing">👗 Clothing</a>
+                    <a href="#accessories">👜 Accessories</a>
+                    <a href="#shoes">👠 Shoes</a>
+                </div>
+            </li>
+            <li><a href="#contact">📞 Contact</a></li>
+            <li><a href="#modal" class="modal-trigger">🆕 Modal</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <div class="contact-us-section">
+        <h1>Contact Us</h1>
+        <p>
+            At Talia's Clothing, we value your feedback and are here to assist you with any questions or concerns you may have. 
+            Whether you need help with your order, have inquiries about our latest collections, or want to share your thoughts on our products, 
+            we’d love to hear from you! Our dedicated customer service team is committed to providing you with the best experience possible. 
+            Feel free to reach out to us via the contact form below, or email us at [your email address]. We look forward to connecting with you!
+        </p>
+    </div>
+    
+    <div class="form-column">
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <aside class="sidebar sticky-sidebar">
+        <h2>Additional Information</h2>
+        <p>We aim to respond to all inquiries within 24 hours.</p>
+        <p>Follow us on social media!</p>
+    </aside>
+</main>
+
+<footer class="footer clearfix">
+    <div class="footer-content">
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@taliasclothing.com</p>
+            <p>Phone: +92 300 1234567</p>
+            <p>Address: 123 Fashion Street, Lahore</p>
+        </div>
+        <div class="footer-newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form>
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Talia's Clothing. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑ Back to Top</button>
+
+<!-- Modal Dialog -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Dialog</h2>
+        <p>This is a sample modal dialog box. You can put any content here.</p>
+    </div>
+</div>
+
+</body>
+</html>

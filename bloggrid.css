@@ -1,0 +1,391 @@
+/* General Reset and Body Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: grid; /* Set up a grid layout */
+    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+}
+
+/* Header Styles */
+header {
+    display: grid; /* Use grid for header layout */
+    grid-template-columns: auto 1fr; /* Logo and navigation */
+    align-items: center; /* Center vertically */
+    background-color: white;
+    padding: 10px 20px; /* Adjust padding for height */
+    box-shadow: 0 2px 5px rgba(121, 120, 120, 0.1);
+}
+
+header .logo {
+    font-size: 1.5em; /* Adjust logo size */
+    color: black;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Flexbox for navigation items */
+    justify-content: center; /* Center navigation items */
+    gap: 20px; /* Spacing between items */
+    margin: 0;
+    padding: 0; /* Remove default padding */
+}
+
+header nav ul li {
+    flex: 1; /* Allow items to grow equally */
+}
+
+header nav ul li a {
+    color: black;
+    font-weight: bold;
+    padding: 10px; /* Increased padding for clickable area */
+    display: flex; /* Use flex for better alignment */
+    justify-content: center; /* Center text */
+    align-items: center; /* Center text vertically */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+header nav ul li a:hover {
+    color: #411f26;
+}
+
+/* Second Header Styles */
+.second-header {
+    background-color: #ffe4e1; /* Light pink background */
+    padding: 20px; /* Increased padding for height */
+}
+
+.second-header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds normal spacing between the list items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Ensure no margin around the list */
+}
+
+/* Hero Section with Video */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 75vh; /* Adjusted height to ensure proper fit */
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure the video covers the full height */
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero Content - Centered Vertically and Horizontally */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in; /* Animation for hero content */
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+    margin-top: -20px;
+    margin-bottom: 50px; /* Adjusted margin to reduce space */
+    animation: fadeIn 1s ease-in; /* Animation for about section */
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.about-content .btn {
+    background-color: #411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.about-content .btn:hover {
+    background-color: #4d2d33;
+}
+
+/* Shop Our Collection Section Styles */
+.featured-collections {
+    padding: 50px;
+    text-align: center;
+    background: whitesmoke;
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-in; /* Animation for featured collections */
+}
+
+/* Center-align the collection items container */
+.collections-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between items */
+}
+
+.collection-item {
+    height: 600px; /* Fixed height */
+    text-align: center;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in; /* Animation for collection items */
+}
+
+.collection-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.collection-item img {
+    width: 100%;
+    height: auto;
+}
+
+.collection-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.collection-item p {
+    font-size: 1em;
+    color: #a3a0a0;
+}
+
+.collection-item .btn {
+    background-color: #411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.collection-item .btn:hover {
+    background-color: #411f26;
+}
+
+/* New Arrivals Section Styles */
+.new-arrivals {
+    padding: 50px;
+    text-align: center;
+    background: whitesmoke;
+    margin-bottom: 50px; /* Added spacing below */
+    animation: fadeIn 1s ease-in; /* Animation for new arrivals */
+}
+
+.new-arrivals h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.arrivals-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between items */
+}
+
+.arrival-item {
+    height: 600px; /* Fixed height */
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in; /* Animation for arrival items */
+}
+
+.arrival-item img {
+    width: 100%;
+    height: auto;
+}
+
+.arrival-item .btn {
+    background-color: #411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.arrival-item .btn:hover {
+    background-color: #4d2b32;
+}
+
+.arrival-info {
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.arrival-info h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.arrival-info p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #dad7d5ee;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    display: grid; /* Change to grid layout */
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Space between form elements */
+    animation: fadeIn 1s ease-in; /* Animation for contact form */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #411f26;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #411f26;
+    color: #fdfbfb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #4d2b32; /* Slightly darker on hover */
+}
+
+/* Additional Info Styles */
+.additional-info {
+    padding: 50px;
+    background: #f1f1f1; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Consistent width */
+    margin: 0 auto; /* Center horizontally */
+    animation: fadeIn 1s ease-in; /* Animation for additional info */
+}
+
+/* Footer Styles */
+footer {
+    background: #f9f9f9; /* Changed to match the design */
+    padding: 20px;
+    text-align: center;
+    color: #333; /* Adjusted text color */
+    position: relative;
+    bottom: 0;
+}
+
+footer .footer-content {
+    display: flex; /* Use Flexbox for footer */
+    flex-wrap: wrap; /* Allow wrapping of columns */
+    justify-content: space-between; /* Space out footer columns */
+    gap: 20px; /* Space between columns */
+}
+
+footer .footer-contact, footer .footer-links, footer .footer-newsletter {
+    flex: 1 1 30%; /* Flex-grow and basis */
+    padding: 10px;
+}
+
+/* Adjusting the size of the specific footer box */
+.footer-newsletter {
+    max-width: 400px; /* Set a smaller max width */
+    margin: 0 auto; /* Center it horizontally */
+    padding: 10px; /* Adjust padding if needed */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+footer .footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-newsletter form input {
+    margin-bottom: 10px;
+}
+
+footer .footer-newsletter form button {
+    align-self: flex-start; /* Align button to the start */
+}
+
+footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #411f26;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}

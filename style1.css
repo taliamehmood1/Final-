@@ -1,0 +1,435 @@
+/* General Reset and Body Styles */
+/* General Reset and Body Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header and Footer Styles */
+header, footer {
+    background: #fff;
+    padding: .5px;
+    box-shadow: 0 2px 5px rgba(121, 120, 120, 0.1);
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white; /* Background color for header */
+    padding: .5px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: .5;
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    float:left;
+    margin: 0 10px; /* Reduced margin for spacing */
+}
+
+header nav ul li a {
+    color:black;
+    font-weight: 600;
+    padding: .5px; /* Reduced padding for thinner look */
+    font-size: 1em; /* Adjust font size to match home tab */
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #411f26;
+    color: #fff;
+}
+.logo{
+    color:black;
+    font-size: 1em; /* Match font size with home tab */
+    padding: .5px;
+    text-decoration: line-through; /* Reduced padding for thinner look */
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Remaining CSS */
+
+
+/* Hero Section with Video */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 75vh; /* Adjusted height to ensure proper fit */
+    margin-bottom: 0; /* Ensure no extra margin below the hero section */
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure the video covers the full height */
+    object-fit: cover;
+    z-index: -1;
+}
+/* Add margin to separate hero and about sections */
+#about {
+    margin-top: 50px;
+    background-color: #f0f0f5; /* Add a different background color */
+    padding: 20px; /* Add some padding for the content */
+}
+
+/* Change the background of the second header */
+.second-header {
+    background-color: #ffe4e1; /* Light pink background */
+    padding: 10px;
+}
+
+.second-header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds normal spacing between the list items */
+    padding: 0;
+    margin: 0;
+}
+
+.second-header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.second-header nav ul li a:hover {
+    color: #411f26;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background-color: #411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #411f26;
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color:white ;
+    margin-top: -20px;
+    margin-bottom: 50px; /* Adjusted margin to reduce space */
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.about-content .btn {
+    background-color:#411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background-color: #4d2d33;
+}
+
+/* Shop Our Collection Section Styles */
+.featured-collections {
+    padding: 50px;
+    text-align: center;
+    background: whitesmoke;
+    margin-bottom: 50px;
+}
+
+.featured-collections h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Center-align the collection items container */
+.collections-grid {
+    text-align: center; /* Ensure child elements are centered */
+}
+
+/* Collection items: Change to inline-block for centering */
+.collection-item {
+    display: inline-block; /* Behaves like inline element to center */
+    margin: 10px;
+    width: 300px; /* Fixed width */
+    height: 600px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    vertical-align: top; /* Align items properly */
+}
+
+/* Hover effect */
+.collection-item:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Image styling */
+.collection-item img {
+    width: 100%;
+    height: auto; /* Keep images responsive */
+    
+}
+
+/* Headings and text styling */
+.collection-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+/* Description text */
+.collection-item p {
+    font-size: 1em;
+    color: #a3a0a0;
+}
+
+/* Button styling */
+.collection-item .btn {
+    background-color: #411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.collection-item .btn:hover {
+    background-color: #411f26;
+}
+
+/* Clearfix to handle any overflow issues */
+.collections-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* New Arrivals Section Styles */
+.new-arrivals {
+    padding: 50px;
+    text-align: center;
+    background: whitesmoke;
+    margin-bottom: 50px; /* Added spacing below */
+}
+
+.new-arrivals h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.arrivals-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.arrival-item {
+    display: inline-block; /* Behaves like inline element to center */
+    margin: 10px;
+    width: 300px; /* Fixed width */
+    height: 600px;
+    text-align: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    vertical-align: top; /* Align items properly */
+}
+.arrival-item .btn {
+    background-color: #411f26;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.arrival-item .btn:hover {
+    background-color: #4d2b32;
+}
+
+
+.arrival-item img {
+    width: 100%;
+    height: auto;
+}
+
+.arrival-info {
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.arrival-info h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.arrival-info p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #dad7d5ee;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #411f26;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #411f26;
+    color: #fdfbfb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #411f26;
+}
+
+/* Footer Styles */
+footer {
+    background: #f9f9f9; /* Changed to match the design */
+    padding: 20px;
+    text-align: center;
+    color: #333; /* Adjusted text color */
+    position: relative;
+    bottom: 0;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .footer-contact, footer .footer-links, footer .footer-newsletter {
+    width: 30%;
+    padding: 10px;
+}
+
+/* Adjusting the size of the specific footer box */
+.footer-newsletter {
+    max-width: 400px; /* Set a smaller max width */
+    margin: 0 auto; /* Center it horizontally */
+    padding: 10px; /* Adjust padding if needed */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+footer .footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-newsletter form input {
+    margin-bottom: 10px;
+}
+
+footer .footer-newsletter form button {
+    align-self: flex-start;
+}
+
+footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #411f26;
+}
